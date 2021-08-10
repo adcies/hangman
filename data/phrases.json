@@ -1,0 +1,62 @@
+{
+  "clothes": [
+    "blouse",
+    "gloves",
+    "hoodie",
+    "bracelet",
+    "sneakers",
+    "underwear",
+    "cardigan",
+    "kerchief",
+    "sweatshirt",
+    "suspenders"
+  ],
+  "food": [
+    "brownie",
+    "spinach",
+    "tomato",
+    "cheesecake",
+    "lasagna",
+    "cupcake",
+    "raspberries",
+    "mustard",
+    "watermelon",
+    "crackers"
+  ],
+  "sport": [
+    "bowling",
+    "boxing",
+    "triathlon",
+    "football pitch",
+    "fitness",
+    "surfing",
+    "referee",
+    "basketball",
+    "volleyball",
+    "handball"
+  ],
+  "countries": [
+    "tanzania",
+    "new zealand",
+    "azerbaijan",
+    "united arab emirates",
+    "indonesia",
+    "ethiopia",
+    "belarus",
+    "lithuania",
+    "belgium",
+    "scotland"
+  ],
+  "brands": [
+    "ferrari",
+    "nescafe",
+    "samsung",
+    "amazon",
+    "microsoft",
+    "heineken",
+    "gillette",
+    "adidas",
+    "starbucks",
+    "oracle"
+  ]
+}
