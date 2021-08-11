@@ -1,0 +1,47 @@
+@import './variables';
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-shadow: 0 0 7px 0 $main-color;
+  max-width: $max-game-width;
+  min-height: $min-game-height;
+  &__attempts {
+    margin: 30px 0;
+    height: $attempts-height-width;
+    width: $attempts-height-width;
+    border: 1px solid gray;
+    line-height: $attempts-height-width;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  &__play {
+    margin: 30px 0;
+    &-category {
+      display: block;
+      margin: 0 auto 30px;
+      padding: 5px 10px;
+    }
+    &-btn {
+      padding: 15px 25px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: $main-color;
+      color: white;
+      border: none;
+      box-shadow: 0 0 7px 0 $main-color;
+      border-radius: 10px;
+      cursor: pointer;
+      &:active {
+        background-color: $main-color-active;
+        box-shadow: 0 0 7px 0 $main-color-active;
+      }
+    }
+  }
+}

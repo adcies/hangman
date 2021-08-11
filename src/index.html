@@ -6,5 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangman</title>
   </head>
-  <body></body>
+  <body>
+    <div class="game">
+      <div class="statistics">
+        <p class="statistics__wins">
+          Wins: <span class="statistics__wins-info">0</span>
+        </p>
+        <p class="statistics__losses">
+          Losses: <span class="statistics__losses-info">0</span>
+        </p>
+        <p class="statistics__attempts">
+          Average number of attempts:
+          <span class="statistics__attempts-info">-</span>
+        </p>
+      </div>
+      <div class="game__attempts">5</div>
+      <div class="phrase">
+        <div class="phrase__letter"></div>
+        <div class="phrase__letter"></div>
+        <div class="phrase__letter"></div>
+        <div class="phrase__letter"></div>
+        <div class="phrase__letter"></div>
+        <div class="phrase__letter"></div>
+        <div class="phrase__letter"></div>
+        <div class="phrase__letter"></div>
+      </div>
+      <div class="board">
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+        <div class="board__letter"></div>
+      </div>
+      <form class="game__play">
+        <select name="category" required class="game__play-category">
+          <option value="">Choose category</option>
+          <option value="food">Food</option>
+          <option value="clothes">Clothes</option>
+          <option value="sport">Sport</option>
+          <option value="countries">Countries</option>
+          <option value="brands">Brands</option>
+        </select>
+        <input type="submit" class="game__play-btn" value="Draw a phrase" />
+      </form>
+    </div>
+  </body>
 </html>
