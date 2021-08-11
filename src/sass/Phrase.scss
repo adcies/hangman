@@ -1,0 +1,16 @@
+@import './variables';
+
+.phrase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 20px;
+  &__letter {
+    margin: 0 7px 30px;
+    border-bottom: 3px solid black;
+    width: $phrase-letter-height-width;
+    height: $phrase-letter-height-width;
+    font-size: $phrase-letter-fontSize;
+    text-align: center;
+  }
+}

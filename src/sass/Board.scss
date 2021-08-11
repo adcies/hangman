@@ -1,0 +1,31 @@
+@import '../sass/variables';
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 20px;
+  &__letter {
+    height: $board-letter-height-width;
+    width: $board-letter-height-width;
+    background-color: #fff;
+    box-shadow: 0 0 7px 0 $main-color;
+    border: none;
+    border-radius: 10px;
+    font-size: $board-letter-fontSize;
+    text-align: center;
+    margin: 30px 8px 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: $main-color;
+      color: white;
+    }
+    &:disabled,
+    &:disabled:hover {
+      box-shadow: 0 0 7px 0 black;
+      color: gray;
+      background-color: #ddd;
+      cursor: default;
+    }
+  }
+}

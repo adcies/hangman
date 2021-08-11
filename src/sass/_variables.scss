@@ -3,6 +3,19 @@ $max-game-width: 1024px;
 $min-game-height: 100vh;
 $main-color: rgb(138, 43, 226);
 $main-color-active: rgb(104, 27, 175);
-//game
 
+//----game
+
+//attempts
 $attempts-height-width: 70px;
+
+//phrase
+$phrase-letter-height-width: 70px;
+$phrase-letter-fontSize: 5rem;
+
+//board
+$board-letter-height-width: 55px;
+$board-letter-fontSize: 3rem;
+
+//statistics
+$statistics-fontSize: 2rem;

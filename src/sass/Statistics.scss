@@ -1,0 +1,14 @@
+@import './variables';
+
+.statistics {
+  margin-top: 20px;
+  font-size: $statistics-fontSize;
+  text-align: center;
+  line-height: 1.5;
+  .result {
+    font-style: italic;
+    &__info {
+      font-weight: bold;
+    }
+  }
+}
