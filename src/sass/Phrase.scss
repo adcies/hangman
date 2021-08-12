@@ -12,5 +12,8 @@
     height: $phrase-letter-height-width;
     font-size: $phrase-letter-fontSize;
     text-align: center;
+    &-space {
+      border: none;
+    }
   }
 }
