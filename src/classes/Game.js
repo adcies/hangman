@@ -1,12 +1,14 @@
 import '../sass/Game.scss';
 import '../sass/Phrase.scss';
 import '../sass/Board.scss';
-import '../sass/Statistics.scss';
+
+import Statistics from './Statistics';
 
 import data from '../../data/phrases.json';
 
 export default class Game {
   constructor() {
+    this.statistics = new Statistics();
     this.form = document.querySelector('form');
     this.select = document.querySelector('select');
     this.alphabetBoard = document.querySelector('.board');
@@ -17,6 +19,10 @@ export default class Game {
   }
 
   #setNumberOfAttempts(numberOfAttempts) {
+    if (this.numberOfAttempts === null) {
+      // this condition ensures that the method below will be called only once (with first Play button click)
+      this.statistics.setInitialNumberOfAttempts(numberOfAttempts);
+    }
     this.numberOfAttempts = numberOfAttempts;
     this.attemptsContainer.textContent = this.numberOfAttempts;
   }
@@ -112,8 +118,10 @@ export default class Game {
   #checkIfGameOver() {
     if (this.numberOfAttempts === 0) {
       this.#toggleButtonsDisable(true);
+      this.statistics.incrementLosses();
       this.#revealThePhrase();
-      return alert('Game is over. You loose!');
+      alert('Game is over. You loose!');
+      return true;
     }
     const phraseLetters = Array.from(
       document.querySelectorAll('.phrase__letter')
@@ -128,8 +136,11 @@ export default class Game {
 
     if (isPhraseGuessed) {
       this.#toggleButtonsDisable(true);
-      return alert('You win. Congratulations!');
+      this.statistics.incrementWins();
+      alert('You win. Congratulations!');
+      return true;
     }
+    return false;
   }
 
   #handleButtonsClick({ target }) {
@@ -138,7 +149,10 @@ export default class Game {
     if (!userGuessedLetterRight) {
       this.#setNumberOfAttempts(--this.numberOfAttempts);
     }
-    this.#checkIfGameOver();
+    const isGameOver = this.#checkIfGameOver();
+    if (isGameOver) {
+      this.statistics.addAverageFailedAttempts(this.numberOfAttempts);
+    }
   }
 
   #addEventListenerToButtons() {
@@ -159,6 +173,7 @@ export default class Game {
 
   init() {
     this.#createAlphabetBoard();
+    this.statistics.renderInitialValues();
     this.#addEventListeners();
   }
 }
