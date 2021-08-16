@@ -33,7 +33,6 @@ export default class Statistics {
     ) {
       const failedAttempts =
         this.initialNumberOfAttempts - numberOfAttemptsLeft;
-      console.log(this.initialNumberOfAttempts);
       this.attempts.push(failedAttempts);
       const average = this.#calculateAverageFailedAttempts(this.attempts);
       this.averageFailedAttemptsInfo.textContent = +average.toFixed(2);

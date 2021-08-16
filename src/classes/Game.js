@@ -34,6 +34,9 @@ export default class Game {
 
   #createLetter(className) {
     const letter = document.createElement('div');
+    if (className.length === 2) {
+      letter.textContent = ' ';
+    }
     className.forEach((singleClassName) => {
       letter.classList.add(singleClassName);
     });
